@@ -11,6 +11,68 @@ A clean architecture template for FastAPI applications.
 - Repository Pattern
 - Docker Support
 
+## Project Structure
+
+```
+fastapi-clean-template/
+├── app/
+│   ├── api/
+│   │   └── v1/
+│   │       ├── endpoints/
+│   │       │   ├── auth.py
+│   │       │   ├── health.py
+│   │       │   └── user.py
+│   │       ├── router.py
+│   │       └── __init__.py
+│   ├── core/
+│   │   ├── config.py
+│   │   ├── exceptions.py
+│   │   ├── middlewares.py
+│   │   └── security.py
+│   ├── db/
+│   │   ├── base.py
+│   │   ├── models/
+│   │   │   ├── __init__.py
+│   │   │   └── user.py
+│   │   └── session.py
+│   ├── dependencies/
+│   │   ├── auth.py
+│   │   ├── common.py
+│   │   └── __init__.py
+│   ├── repositories/
+│   │   ├── base.py
+│   │   ├── interfaces.py
+│   │   ├── user_repository.py
+│   │   └── __init__.py
+│   ├── schemas/
+│   │   ├── pagination.py
+│   │   ├── token.py
+│   │   ├── user.py
+│   │   └── __init__.py
+│   ├── services/
+│   │   ├── auth_service.py
+│   │   ├── base_service.py
+│   │   ├── user_service.py
+│   │   └── __init__.py
+│   ├── main.py
+│   └── __init__.py
+├── tests/
+│   ├── conftest.py
+│   ├── test_health.py
+│   └── __init__.py
+├── alembic/
+│   ├── env.py
+│   └── versions/
+│       └── __init__.py
+├── .env
+├── .env.example
+├── alembic.ini
+├── docker-compose.yml
+├── Dockerfile
+├── pyproject.toml
+└── README.md
+```
+
 ## Running
 
 1. Install dependencies: `poetry install`
