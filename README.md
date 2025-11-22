@@ -28,7 +28,9 @@ fastapi-clean-template/
 │   │   ├── config.py
 │   │   ├── exceptions.py
 │   │   ├── middlewares.py
-│   │   └── security.py
+│   │   ├── security.py
+│   │   ├── redis.py
+│   │   └── kafka.py
 │   ├── db/
 │   │   ├── base.py
 │   │   ├── models/
@@ -38,21 +40,25 @@ fastapi-clean-template/
 │   ├── dependencies/
 │   │   ├── auth.py
 │   │   ├── common.py
-│   │   └── __init__.py
-│   ├── repositories/
-│   │   ├── base.py
-│   │   ├── interfaces.py
-│   │   ├── user_repository.py
+│   │   ├── redis.py
+│   │   └── kafka.py
+│   ├── events/
+│   │   ├── __init__.py
+│   │   ├── producer.py
+│   │   ├── schemas.py
+│   │   └── topics.py
+│   ├── utils/
+│   │   └── redis_cache.py
+│   ├── services/
+│   │   ├── auth_service.py
+│   │   ├── base_service.py
+│   │   ├── user_service.py
+│   │   ├── kafka_service.py
 │   │   └── __init__.py
 │   ├── schemas/
 │   │   ├── pagination.py
 │   │   ├── token.py
 │   │   ├── user.py
-│   │   └── __init__.py
-│   ├── services/
-│   │   ├── auth_service.py
-│   │   ├── base_service.py
-│   │   ├── user_service.py
 │   │   └── __init__.py
 │   ├── main.py
 │   └── __init__.py
